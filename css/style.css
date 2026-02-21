@@ -190,3 +190,280 @@ body {
     white-space: normal;
     max-width: 100%;
 }
+
+/* iOS-Style Folders */
+.ios-folder {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .ios-folder {
+        max-width: 160px;
+    }
+}
+
+.ios-folder:hover {
+    transform: translateY(-5px);
+}
+
+.ios-folder:hover .ios-folder-icon {
+    background: rgba(60, 35, 72, 0.55);
+    border-color: rgba(173, 43, 238, 0.8);
+    box-shadow: 0 15px 40px rgba(173, 43, 238, 0.4),
+                inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                0 0 35px rgba(173, 43, 238, 0.35);
+}
+
+.ios-folder:hover .ios-folder-icon::before {
+    background: rgba(60, 35, 72, 0.7);
+    border-color: rgba(173, 43, 238, 0.8);
+    box-shadow: 0 2px 12px rgba(173, 43, 238, 0.35),
+                inset 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+.ios-folder:active {
+    transform: scale(0.95);
+}
+
+.ios-folder-icon {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: rgba(60, 35, 72, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(173, 43, 238, 0.5);
+    border-radius: 0 12px 12px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(173, 43, 238, 0.25),
+                inset 0 2px 4px rgba(255, 255, 255, 0.1),
+                0 0 25px rgba(173, 43, 238, 0.2);
+    position: relative;
+    overflow: visible;
+    transition: all 0.3s ease;
+}
+
+/* Pestaña superior de la carpeta (estilo macOS) */
+.ios-folder-icon::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 38%;
+    height: 14px;
+    background: rgba(60, 35, 72, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(173, 43, 238, 0.5);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 2px 10px rgba(173, 43, 238, 0.25),
+                inset 0 1px 2px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Sombra y borde con glow púrpura */
+.ios-folder-icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0 12px 12px 12px;
+    border: 1px solid rgba(173, 43, 238, 0.4);
+    pointer-events: none;
+    box-shadow: inset 0 1px 3px rgba(173, 43, 238, 0.15);
+}
+
+.folder-main-icon {
+    display: none;
+}
+
+.ios-folder-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    text-align: center;
+    font-family: 'Spline Sans', sans-serif;
+    margin-top: 12px;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.ios-folder:hover .ios-folder-name {
+    color: #ad2bee;
+}
+
+@media (max-width: 768px) {
+    .ios-folder-name {
+        font-size: 0.95rem;
+        margin-top: 10px;
+    }
+}
+
+/* Discord Banner Glassmorphism */
+.discord-banner > div {
+    background: rgba(173, 43, 238, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(173, 43, 238, 0.5);
+    box-shadow: 0 10px 30px rgba(173, 43, 238, 0.4),
+                inset 0 2px 4px rgba(255, 255, 255, 0.1),
+                0 0 25px rgba(173, 43, 238, 0.3);
+}
+
+/* Folder Modal Styles */
+.folder-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+.folder-modal.hidden {
+    display: none;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalScaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.folder-modal-content {
+    background: rgba(28, 16, 34, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(173, 43, 238, 0.3);
+    border-radius: 1.5rem;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalScaleIn 0.3s ease-out;
+    box-shadow: 0 20px 60px rgba(173, 43, 238, 0.3);
+    scrollbar-width: thin;
+    scrollbar-color: #ad2bee rgba(173, 43, 238, 0.1);
+}
+
+.folder-modal-content::-webkit-scrollbar { width: 0.5rem; }
+.folder-modal-content::-webkit-scrollbar-track { background: rgba(173, 43, 238, 0.1); border-radius: 1rem; }
+.folder-modal-content::-webkit-scrollbar-thumb { background: #ad2bee; border-radius: 1rem; }
+.folder-modal-content::-webkit-scrollbar-thumb:hover { background: #c44fff; }
+
+.folder-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(173, 43, 238, 0.2);
+    border: 1px solid rgba(173, 43, 238, 0.3);
+    border-radius: 50%;
+    color: #ad2bee;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.folder-modal-close:hover {
+    background: #ad2bee;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.folder-modal-header {
+    padding: 2rem 2rem 1rem 2rem;
+    text-align: center;
+}
+
+.folder-modal-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1rem;
+    background: rgba(173, 43, 238, 0.2);
+    border: 1px solid rgba(173, 43, 238, 0.3);
+    border-radius: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.folder-modal-icon .material-symbols-outlined {
+    font-size: 2rem;
+    color: #ad2bee;
+}
+
+.folder-modal-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #ffffff;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+.folder-modal-body {
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(60, 35, 72, 0.3);
+    border: 1px solid rgba(173, 43, 238, 0.2);
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+}
+
+.folder-item:hover {
+    background: rgba(60, 35, 72, 0.5);
+    border-color: rgba(173, 43, 238, 0.4);
+    transform: translateX(4px);
+}
+
+.folder-item .material-symbols-outlined {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.folder-cta {
+    background: #ad2bee;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.folder-cta:hover {
+    background: #c44fff;
+    box-shadow: 0 0 20px rgba(173, 43, 238, 0.6);
+    transform: scale(1.05);
+}

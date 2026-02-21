@@ -104,187 +104,362 @@
                         class="inline-block glass px-4 py-1 rounded-full border border-primary/30 text-primary text-xs font-bold tracking-widest uppercase">
                         Zona de Combate de Streams 💣
                     </div>
-                    <h2 class="text-6xl md:text-8xl font-black italic leading-[0.9] tracking-tighter">
+                    <h2 class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
                         Freebies <br /> y <span class="text-primary italic">Recursos</span>
                     </h2>
                     <p class="text-xl text-slate-400 max-w-lg">
                         Aquí encontrarás recursos, guías, descargables, freebies y más. ✨
                     </p>
                     <div class="flex gap-4">
-                        <button
-                            class="bg-primary text-white px-8 py-4 rounded-full font-black text-sm uppercase tracking-wide hover:shadow-[0_0_25px_rgba(173,43,238,0.6)] hover:scale-105 transition-all flex items-center gap-2">
-                            <span class="material-symbols-outlined text-lg">star</span>
+                        <!-- <button
+                            class="bg-primary text-white px-8 py-4 rounded-full font-black hover:shadow-[0_0_25px_rgba(173,43,238,0.6)] transition-all">
                             VER GUÍAS AHORA
-                        </button>
-                        <button
-                            class="glass px-8 py-4 rounded-full font-black text-sm uppercase tracking-wide border border-primary/30 hover:bg-primary/10 hover:scale-105 transition-all flex items-center gap-2">
-                            <span class="material-symbols-outlined text-lg">download</span>
-                            Bajar Templates
-                        </button>
+                        </button> -->
+
                     </div>
                 </div>
                 <div class="relative flex-1 flex justify-center">
                     <div
-                        class="w-80 h-80 rounded-full bg-gradient-to-tr from-primary to-purple-900 flex items-center justify-center p-8 relative animate-pulse shadow-[0_0_50px_rgba(173,43,238,0.3)]">
+                        class="w-80 h-80 rounded-full relative animate-pulse shadow-[0_0_50px_rgba(173,43,238,0.3)] overflow-hidden">
+                        <img src="imagenes/grupal.jpg" alt="BTS" class="w-full h-full object-cover rounded-full" />
                         <div
-                            class="w-full h-full rounded-full border-4 border-dashed border-white/20 animate-spin-slow absolute">
+                            class="w-full h-full rounded-full border-4 border-dashed border-white/20 animate-spin-slow absolute inset-0">
                         </div>
-                        <span class="material-symbols-outlined text-8xl text-white">star_half</span>
                     </div>
-                    <!-- Virtual Stickers -->
-                    <div
-                        class="absolute top-0 right-0 glass px-4 py-2 rounded-xl sticker-rotate-2 border-2 border-primary shadow-lg font-black text-primary">
-                        ¡GAAA!</div>
-                    <div
-                        class="absolute bottom-4 left-0 glass px-4 py-2 rounded-xl sticker-rotate-1 border-2 border-white/20 shadow-lg font-black italic text-white">
-                        BORAHAE</div>
-                    <div
-                        class="absolute -top-10 left-20 bg-yellow-400 text-black px-3 py-1 rounded-full font-black text-xs">
-                        TOP 1 MUNDIAL</div>
+                    <!-- 3D Stickers -->
+                    <!-- Corazón - arriba derecha (1 o'clock) -->
+                    <div class="absolute -top-6 right-8 transform rotate-12 hover:scale-110 transition-transform cursor-pointer"
+                        style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 10px rgba(255,105,180,0.5));">
+                        <span class="material-symbols-outlined text-6xl font-bold"
+                            style="color: #ff69b4; text-shadow: 3px 3px 0px #ff1493, 6px 6px 0px rgba(255,20,147,0.3);">favorite</span>
+                    </div>
+                    <!-- Nota musical - derecha (3 o'clock) -->
+                    <div class="absolute top-1/2 -right-8 transform -translate-y-1/2 rotate-[15deg] hover:scale-110 transition-transform cursor-pointer"
+                        style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 10px rgba(76,175,80,0.5));">
+                        <span class="material-symbols-outlined text-6xl font-bold"
+                            style="color: #4caf50; text-shadow: 3px 3px 0px #2e7d32, 6px 6px 0px rgba(46,125,50,0.3);">music_note</span>
+                    </div>
+                    <!-- Teclado - abajo (6 o'clock) -->
+                    <div class="absolute -bottom-6 left-[58%] transform -translate-x-1/2 -rotate-6 hover:scale-110 transition-transform cursor-pointer"
+                        style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 10px rgba(255,215,0,0.5));">
+                        <span class="material-symbols-outlined text-6xl font-bold"
+                            style="color: #ffd700; text-shadow: 3px 3px 0px #ffa500, 6px 6px 0px rgba(255,165,0,0.3);">keyboard</span>
+                    </div>
+                    <!-- Estrella - izquierda (9 o'clock) -->
+                    <div class="absolute top-1/2 left-6 transform -translate-y-1/2 rotate-[25deg] hover:scale-110 transition-transform cursor-pointer animate-pulse"
+                        style="filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3)) drop-shadow(0 0 15px rgba(173,43,238,0.7));">
+                        <span class="material-symbols-outlined text-6xl font-bold"
+                            style="color: #ad2bee; text-shadow: 3px 3px 0px #8b00ff, 6px 6px 0px rgba(139,0,255,0.3);">star</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Resources Grid -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            <!-- Guías de Votación -->
-            <div class="glass p-8 rounded-xl hover:border-primary transition-all group">
-                <div
-                    class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-primary group-hover:text-white">how_to_vote</span>
-                </div>
-                <h3 class="text-2xl font-black mb-4">Guías de Votación</h3>
-                <p class="text-slate-400 text-sm mb-6">Paso a paso para MAMA y Billboard. No te quedes "ya fuiste", vota
-                    aquí.</p>
-                <ul class="space-y-3">
-                    <li class="flex items-center gap-2 text-sm font-medium text-primary">
-                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span> MAMA 2024 Tutorial
-                    </li>
-                    <li class="flex items-center gap-2 text-sm font-medium text-slate-300">
-                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span> Billboard Stream
-                    </li>
-                </ul>
+        <!-- iOS-Style Folders Section -->
+        <section class="mb-20">
+            <div class="flex items-center justify-between mb-14">
+                <h2 class="text-3xl md:text-4xl font-black tracking-tight">
+                    Explorar <span class="text-primary italic">Categorías</span>
+                </h2>
             </div>
-            <!-- Diccionario ARMY -->
-            <div class="glass p-8 rounded-xl hover:border-primary transition-all group">
-                <div
-                    class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-primary group-hover:text-white">menu_book</span>
+
+            <!-- Folders Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-10 max-w-6xl mx-auto">
+
+                <!-- Folder 1: Comeback & Goals -->
+                <div class="ios-folder" onclick="openFolderModal('folder1')">
+                    <div class="ios-folder-icon">
+                        <span class="material-symbols-outlined folder-main-icon">emoji_events</span>
+                    </div>
+                    <p class="ios-folder-name">Comeback &amp; Goals</p>
                 </div>
-                <h3 class="text-2xl font-black mb-4">Diccionario ARMY</h3>
-                <p class="text-slate-400 text-sm mb-6">Slang explicado con toda la sazón peruana. Pa' que entiendas todo
-                    el chisme.</p>
-                <div class="bg-background-dark/50 p-3 rounded-lg border border-primary/10">
-                    <p class="text-xs font-bold text-primary mb-1">BIAS:</p>
-                    <p class="text-xs text-slate-400">Tu preferido, tu 'causa' máximo del grupo. Al que le rezas.</p>
+
+                <!-- Folder 2: Shopping & Perú -->
+                <div class="ios-folder" onclick="openFolderModal('folder2')">
+                    <div class="ios-folder-icon">
+                        <span class="material-symbols-outlined folder-main-icon">shopping_bag</span>
+                    </div>
+                    <p class="ios-folder-name">Shopping &amp; Perú</p>
                 </div>
-            </div>
-            <!-- Directorio de Tiendas -->
-            <div class="glass p-8 rounded-xl hover:border-primary transition-all group">
-                <div
-                    class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-primary group-hover:text-white">shopping_bag</span>
+
+                <!-- Folder 3: Stationery & Study -->
+                <div class="ios-folder" onclick="openFolderModal('folder3')">
+                    <div class="ios-folder-icon">
+                        <span class="material-symbols-outlined folder-main-icon">menu_book</span>
+                    </div>
+                    <p class="ios-folder-name">Stationery &amp; Study</p>
                 </div>
-                <h3 class="text-2xl font-black mb-4">Tiendas Perú</h3>
-                <p class="text-slate-400 text-sm mb-6">Los "huaris" de confianza en Polvos Azules y Arenales para tu
-                    merch.</p>
-                <div class="flex flex-wrap gap-2">
-                    <span
-                        class="bg-primary/10 border border-primary/20 text-[10px] font-bold px-2 py-1 rounded-full text-primary">Arenales
-                        Plaza</span>
-                    <span
-                        class="bg-primary/10 border border-primary/20 text-[10px] font-bold px-2 py-1 rounded-full text-primary">Polvos
-                        Azules</span>
+
+                <!-- Folder 4: Aesthetic & Custom -->
+                <div class="ios-folder" onclick="openFolderModal('folder4')">
+                    <div class="ios-folder-icon">
+                        <span class="material-symbols-outlined folder-main-icon">palette</span>
+                    </div>
+                    <p class="ios-folder-name">Aesthetic &amp; Custom</p>
                 </div>
-            </div>
-            <!-- Templates -->
-            <div class="glass p-8 rounded-xl hover:border-primary transition-all group">
-                <div
-                    class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                    <span class="material-symbols-outlined text-primary group-hover:text-white">palette</span>
-                </div>
-                <h3 class="text-2xl font-black mb-4">Templates RRSS</h3>
-                <p class="text-slate-400 text-sm mb-6">Wallpapers y iconos aesthetic para que tu perfil sea el más pila.
-                </p>
-                <div class="grid grid-cols-3 gap-2">
-                    <div class="h-10 bg-gradient-to-br from-primary to-purple-800 rounded-lg"></div>
-                    <div class="h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg"></div>
-                    <div class="h-10 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-lg"></div>
-                </div>
+
             </div>
         </section>
+
+        <!-- Folder Modals -->
+        <!-- Modal 1: Comeback & Goals -->
+        <div id="folder1-modal" class="folder-modal hidden" onclick="closeFolderModal('folder1', event)">
+            <div class="folder-modal-content" onclick="event.stopPropagation()">
+                <button class="folder-modal-close" onclick="closeFolderModal('folder1')">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="folder-modal-header">
+                    <div class="folder-modal-icon">
+                        <span class="material-symbols-outlined">emoji_events</span>
+                    </div>
+                    <h3 class="folder-modal-title">Comeback &amp; Goals</h3>
+                </div>
+                <div class="folder-modal-body">
+                    <p class="text-slate-400 mb-6">Todo lo que necesitas para apoyar el comeback de BTS y alcanzar
+                        nuestras metas colectivas.</p>
+
+                    <div class="space-y-4">
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">how_to_vote</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Votaciones Arirang</h4>
+                                <p class="text-sm text-slate-400">Guía completa para votar en Arirang Chart</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ir</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">trending_up</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Metas de Stream</h4>
+                                <p class="text-sm text-slate-400">Objetivos diarios y semanales para YouTube/Spotify</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ver</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">link</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Links Rápidos</h4>
+                                <p class="text-sm text-slate-400">Accesos directos a playlists y campañas</p>
+                            </div>
+                            <a href="#" class="folder-cta">Abrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2: Shopping & Perú -->
+        <div id="folder2-modal" class="folder-modal hidden" onclick="closeFolderModal('folder2', event)">
+            <div class="folder-modal-content" onclick="event.stopPropagation()">
+                <button class="folder-modal-close" onclick="closeFolderModal('folder2')">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="folder-modal-header">
+                    <div class="folder-modal-icon">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                    </div>
+                    <h3 class="folder-modal-title">Shopping &amp; Perú</h3>
+                </div>
+                <div class="folder-modal-body">
+                    <p class="text-slate-400 mb-6">Tu guía definitiva para comprar merch de BTS en Lima sin que te vean
+                        la cara.</p>
+
+                    <div class="space-y-4">
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">store</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Tiendas Arenales</h4>
+                                <p class="text-sm text-slate-400">Los mejores spots en Arenales Plaza</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ver</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Polvos Azules</h4>
+                                <p class="text-sm text-slate-400">Tiendas de confianza en Polvos</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ir</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">savings</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Tips de Ahorro</h4>
+                                <p class="text-sm text-slate-400">Cómo conseguir el mejor precio</p>
+                            </div>
+                            <a href="#" class="folder-cta">Leer</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">checklist</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Guía de Compra</h4>
+                                <p class="text-sm text-slate-400">Qué verificar antes de comprar</p>
+                            </div>
+                            <a href="#" class="folder-cta">Abrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3: Stationery & Study -->
+        <div id="folder3-modal" class="folder-modal hidden" onclick="closeFolderModal('folder3', event)">
+            <div class="folder-modal-content" onclick="event.stopPropagation()">
+                <button class="folder-modal-close" onclick="closeFolderModal('folder3')">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="folder-modal-header">
+                    <div class="folder-modal-icon">
+                        <span class="material-symbols-outlined">menu_book</span>
+                    </div>
+                    <h3 class="folder-modal-title">Stationery &amp; Study</h3>
+                </div>
+                <div class="folder-modal-body">
+                    <p class="text-slate-400 mb-6">Journals, stickers y recursos para organizar tu vida ARMY y
+                        académica.</p>
+
+                    <div class="space-y-4">
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">menu_book</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Journals ARMY</h4>
+                                <p class="text-sm text-slate-400">Descarga tu journal personalizado</p>
+                            </div>
+                            <a href="https://res.cloudinary.com/dqrqwavqb/image/upload/fl_attachment/v1771651532/BTS_journal_kmjcsb.webp"
+                                download class="folder-cta">Descargar</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">sticky_note_2</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Stickers Imprimibles</h4>
+                                <p class="text-sm text-slate-400">Pack de stickers para decorar</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ver</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">edit_calendar</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Planners</h4>
+                                <p class="text-sm text-slate-400">Organiza tus fechas importantes</p>
+                            </div>
+                            <a href="#" class="folder-cta">Abrir</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">school</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Study Tips</h4>
+                                <p class="text-sm text-slate-400">Estudia con música de BTS</p>
+                            </div>
+                            <a href="#" class="folder-cta">Leer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 4: Aesthetic & Custom -->
+        <div id="folder4-modal" class="folder-modal hidden" onclick="closeFolderModal('folder4', event)">
+            <div class="folder-modal-content" onclick="event.stopPropagation()">
+                <button class="folder-modal-close" onclick="closeFolderModal('folder4')">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <div class="folder-modal-header">
+                    <div class="folder-modal-icon">
+                        <span class="material-symbols-outlined">palette</span>
+                    </div>
+                    <h3 class="folder-modal-title">Aesthetic &amp; Custom</h3>
+                </div>
+                <div class="folder-modal-body">
+                    <p class="text-slate-400 mb-6">Wallpapers, iconos y widgets para personalizar tu dispositivo estilo
+                        ARMY.</p>
+
+                    <div class="space-y-4">
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">wallpaper</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Wallpapers HD</h4>
+                                <p class="text-sm text-slate-400">Fondos de pantalla aesthetic</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ver</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">apps</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Icon Packs</h4>
+                                <p class="text-sm text-slate-400">Iconos personalizados de BTS</p>
+                            </div>
+                            <a href="#" class="folder-cta">Descargar</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">widgets</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Widgets iOS</h4>
+                                <p class="text-sm text-slate-400">Widgets para tu pantalla de inicio</p>
+                            </div>
+                            <a href="#" class="folder-cta">Abrir</a>
+                        </div>
+
+                        <div class="folder-item">
+                            <span class="material-symbols-outlined text-primary">photo_library</span>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg">Templates RRSS</h4>
+                                <p class="text-sm text-slate-400">Plantillas para Instagram &amp; TikTok</p>
+                            </div>
+                            <a href="#" class="folder-cta">Ver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Discord CTA Section -->
-        <section
-            class="relative overflow-hidden bg-primary rounded-xl p-12 md:p-20 text-center shadow-[0_0_50px_rgba(173,43,238,0.4)]">
-            <div class="absolute inset-0 opacity-20"
-                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;">
-            </div>
-            <div class="absolute -top-10 -right-10 w-64 h-64 bg-white/20 blur-[80px] rounded-full"></div>
-            <div class="relative z-10 flex flex-col items-center gap-8">
-                <div class="flex items-center gap-4">
-                    <div class="flex -space-x-4">
-                        <img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="User avatar 1"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDffTAjK-fiftJcrdcDCuzPei8VUhNPuK_ZWgN3fKMuFJo7Il5UKyOVPcEquW5-wins1j4nJVV9zApHJnof7JkGaDUQi5FRtHA8dsDf2EkA9VdKyAsxLqjJyHJJlOOQ74-_RcTB5KMfqoELv9yMbr-Ve-E2cU95xzymt-hZ4ba3cHavFy8CT5UtRWfy3zq9yCuYnzNTKQ961dsF90hGx4pvNPS5gtHUT8Dnlku4zQor6aHm7NexWnb4dnDehiPFiulZI0thyrR4euU" />
-                        <img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="User avatar 2"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKBwz5cSNHFM1V5eZQvJepZ3ofqY6aWomD5z7sLV6Fd2dznVO8maFROTOUxMUccYXxeK3LKz1bPtxrDA-916KieAGLILwbr2b3aOpybD4FwaxpYrY7VYHnM0wEPKhhiMVusDRCmBudGVYg1Uh9mkkpgK3h4URTHVMzYgPkiofWdVL_G5HR7E-0UnBPW6vIuGFypq_Q1-b_2jWiSXyIOakaarT1EBRFUkZk8wDmH6-0mO8Wyiwpm0nidYYOPEsAw_uao4Zj3ybY0-8" />
-                        <img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="User avatar 3"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWIe9bbFt7_3yPKDpHA31x1D-pd6_Bsvg0puxFhJ8tljAsK-2lgO6Bs91KBovqIedeu9n7gvszBSkb-pmkaK8l0M-i5YZfDNLuz_0UdZ7KA-aO58HCbAij-jsRTCfuJl2L-zCUXamESP9W14hiExaQEAvu2JGNO6BAi6iCMx-bXblsQurI2GEKTZ0S7CKorHBK3w7GrETy3kBy-XplqPGwhESnSKZVBmKktea8orS34vPcY6TkuADFcMiQbii_men0PajVOWciVDQ" />
-                        <div
-                            class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center text-[10px] font-bold border-2 border-primary text-white">
-                            +50k</div>
-                    </div>
+        <section class="discord-banner max-w-6xl mx-auto">
+            <div class="relative overflow-hidden rounded-xl p-6 md:p-8 text-center">
+                <div class="absolute inset-0 opacity-20"
+                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;">
                 </div>
-                <h2 class="text-4xl md:text-6xl font-black text-white leading-tight">¡ÚNETE A LA MANCHA <br /> EN
-                    DISCORD! 👍</h2>
-                <p class="text-white/80 max-w-xl text-lg font-medium">
-                    Ya somos más de 50,000 Armys activas compartiendo data, memes y streams las 24 horas. ¡No seas falla
-                    y entra ya!
-                </p>
-                <button
-                    class="bg-white text-primary px-12 py-5 rounded-full font-black text-xl hover:bg-background-dark hover:text-white transition-all shadow-2xl flex items-center gap-3">
-                    <span class="material-symbols-outlined font-black">login</span>
-                    ENTRAR AL DISCORD
-                </button>
-                <div class="flex gap-8 mt-4 text-white/60 font-bold uppercase tracking-widest text-xs">
-                    <div class="flex flex-col">
-                        <span class="text-white text-2xl font-black">2.4k</span>
-                        Online ahora
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/30 blur-[80px] rounded-full"></div>
+                <div class="relative z-10 flex flex-col items-center gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-4">
+                            <img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="User avatar 1"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDffTAjK-fiftJcrdcDCuzPei8VUhNPuK_ZWgN3fKMuFJo7Il5UKyOVPcEquW5-wins1j4nJVV9zApHJnof7JkGaDUQi5FRtHA8dsDf2EkA9VdKyAsxLqjJyHJJlOOQ74-_RcTB5KMfqoELv9yMbr-Ve-E2cU95xzymt-hZ4ba3cHavFy8CT5UtRWfy3zq9yCuYnzNTKQ961dsF90hGx4pvNPS5gtHUT8Dnlku4zQor6aHm7NexWnb4dnDehiPFiulZI0thyrR4euU" />
+                            <img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="User avatar 2"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKBwz5cSNHFM1V5eZQvJepZ3ofqY6aWomD5z7sLV6Fd2dznVO8maFROTOUxMUccYXxeK3LKz1bPtxrDA-916KieAGLILwbr2b3aOpybD4FwaxpYrY7VYHnM0wEPKhhiMVusDRCmBudGVYg1Uh9mkkpgK3h4URTHVMzYgPkiofWdVL_G5HR7E-0UnBPW6vIuGFypq_Q1-b_2jWiSXyIOakaarT1EBRFUkZk8wDmH6-0mO8Wyiwpm0nidYYOPEsAw_uao4Zj3ybY0-8" />
+                            <img class="w-12 h-12 rounded-full border-2 border-primary" data-alt="User avatar 3"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWIe9bbFt7_3yPKDpHA31x1D-pd6_Bsvg0puxFhJ8tljAsK-2lgO6Bs91KBovqIedeu9n7gvszBSkb-pmkaK8l0M-i5YZfDNLuz_0UdZ7KA-aO58HCbAij-jsRTCfuJl2L-zCUXamESP9W14hiExaQEAvu2JGNO6BAi6iCMx-bXblsQurI2GEKTZ0S7CKorHBK3w7GrETy3kBy-XplqPGwhESnSKZVBmKktea8orS34vPcY6TkuADFcMiQbii_men0PajVOWciVDQ" />
+                            <div
+                                class="w-12 h-12 rounded-full bg-background-dark flex items-center justify-center text-[10px] font-bold border-2 border-primary text-white">
+                                +50k</div>
+                        </div>
                     </div>
-                    <div class="flex flex-col">
-                        <span class="text-white text-2xl font-black">150+</span>
-                        Canales de voz
-                    </div>
+                    <h2 class="text-2xl md:text-4xl font-black text-white leading-tight">¡Únete a nuestra comunidad
+                        <br /> en discord!
+                    </h2>
+                    <p class="text-white/80 max-w-xl text-base font-medium">
+                        Un espacio donde cada momento de Bangtan se comparte juntxs.❤️‍🔥
+                    </p>
+                    <button
+                        class="bg-white text-primary px-10 py-4 rounded-full font-black text-lg hover:bg-background-dark hover:text-white transition-all shadow-2xl flex items-center gap-3">
+                        <span class="material-symbols-outlined font-black">login</span>
+                        ENTRAR AL DISCORD
+                    </button>
+
                 </div>
             </div>
         </section>
 
-        <!-- Dictionary Teaser (Gen Z Peruvian Style) -->
-        <section class="space-y-8">
-            <div class="flex items-center justify-between">
-                <h2 class="text-3xl font-black">Diccionario ARMY x Perú 🇵🇪</h2>
-                <button class="text-primary font-bold flex items-center gap-2 hover:underline">
-                    Ver todo el glosario <span class="material-symbols-outlined">trending_flat</span>
-                </button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass p-6 rounded-xl border-l-4 border-l-primary">
-                    <h4 class="text-primary font-black text-xl mb-2">Stan</h4>
-                    <p class="text-slate-400 italic mb-4">"Causa, yo staneo a Jimin desde el día 1"</p>
-                    <p class="text-sm">Ser ultra fan, seguidor fiel, el que se sabe hasta su tipo de sangre.</p>
-                </div>
-                <div class="glass p-6 rounded-xl border-l-4 border-l-primary">
-                    <h4 class="text-primary font-black text-xl mb-2">Pila</h4>
-                    <p class="text-slate-400 italic mb-4">"¡Gentita, pónganse pilas con el stream!"</p>
-                    <p class="text-sm">Estar activo, con energía, listo para la guerra de votos.</p>
-                </div>
-                <div class="glass p-6 rounded-xl border-l-4 border-l-primary">
-                    <h4 class="text-primary font-black text-xl mb-2">Ya Fuiste</h4>
-                    <p class="text-slate-400 italic mb-4">"Si no compraste preventa, ya fuiste..."</p>
-                    <p class="text-sm">Perder la oportunidad, quedarse fuera del evento o del trend.</p>
-                </div>
-            </div>
-        </section>
+
     </main>
 
     <!-- Standardized Footer -->

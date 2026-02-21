@@ -173,3 +173,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// iOS-Style Folder Modal Functions (Global scope for onclick)
+window.openFolderModal = function(folderId) {
+    const modal = document.getElementById(`${folderId}-modal`);
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+window.closeFolderModal = function(folderId, event) {
+    // Allow closing by clicking the modal overlay
+    if (event && !event.target.classList.contains('folder-modal')) {
+        return;
+    }
+    
+    const modal = document.getElementById(`${folderId}-modal`);
+    if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+};
+
+// Add ESC key support for folder modals
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const folders = ['folder1', 'folder2', 'folder3', 'folder4'];
+        folders.forEach(folderId => {
+            const modal = document.getElementById(`${folderId}-modal`);
+            if (modal && !modal.classList.contains('hidden')) {
+                window.closeFolderModal(folderId);
+            }
+        });
+    }
+});
