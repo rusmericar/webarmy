@@ -303,13 +303,28 @@
 
         <div class="flex flex-wrap gap-3 mb-12 border-b border-white/5 pb-8">
             <button onclick="applyFilter('todas')" id="filter-todas"
-                class="filter-btn filter-active px-8 py-3 rounded-full bg-primary text-white text-[11px] font-900 uppercase transition-all shadow-md hover:shadow-lg">Todas</button>
+                class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                <span class="material-symbols-outlined text-lg">apps</span>
+                Todas
+            </button>
+
             <button onclick="applyFilter('noticias')" id="filter-noticias"
-                class="filter-btn px-8 py-3 rounded-full bg-white/5 text-slate-300 text-[11px] font-900 uppercase hover:bg-white/10 transition-all">Noticias</button>
+                class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                <span class="material-symbols-outlined text-lg">newspaper</span>
+                Noticias
+            </button>
+
             <button onclick="applyFilter('spotlight')" id="filter-spotlight"
-                class="filter-btn px-8 py-3 rounded-full bg-white/5 text-slate-300 text-[11px] font-900 uppercase hover:bg-white/10 transition-all">Spotlight</button>
+                class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                <span class="material-symbols-outlined text-lg">auto_awesome</span>
+                Spotlight
+            </button>
+
             <button onclick="applyFilter('teorias')" id="filter-teorias"
-                class="filter-btn px-8 py-3 rounded-full bg-white/5 text-slate-300 text-[11px] font-900 uppercase hover:bg-white/10 transition-all">Teorías</button>
+                class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                <span class="material-symbols-outlined text-lg">psychology</span>
+                Teorías
+            </button>
         </div>
 
         <div class="cards-grid">

@@ -26,7 +26,8 @@
         }
     </script>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap"
         rel="stylesheet" />
     <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
@@ -40,7 +41,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- Post-its Custom Styles -->
     <style>
         /* Hero Section - Remove white border effect */
@@ -50,7 +51,7 @@
             -webkit-box-shadow: none !important;
             outline: none !important;
         }
-        
+
         section.relative.overflow-hidden.rounded-xl img {
             border: none !important;
             outline: none !important;
@@ -58,19 +59,19 @@
             margin: 0;
             padding: 0;
         }
-        
+
         .post-it {
             position: relative;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
             will-change: transform;
             font-family: 'Patrick Hand', cursive;
         }
-        
+
         .post-it:hover {
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04), 0 0 20px rgba(173, 43, 238, 0.2);
             z-index: 10;
         }
-        
+
         /* Cinta adhesiva realista */
         .tape {
             position: absolute;
@@ -79,18 +80,18 @@
             transform: translateX(-50%) rotate(-2deg);
             width: 80px;
             height: 24px;
-            background: linear-gradient(135deg, 
-                rgba(255, 248, 220, 0.85) 0%, 
-                rgba(255, 250, 205, 0.9) 50%, 
-                rgba(255, 248, 220, 0.85) 100%);
+            background: linear-gradient(135deg,
+                    rgba(255, 248, 220, 0.85) 0%,
+                    rgba(255, 250, 205, 0.9) 50%,
+                    rgba(255, 248, 220, 0.85) 100%);
             border-radius: 2px;
-            box-shadow: 
+            box-shadow:
                 0 1px 2px rgba(0, 0, 0, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3),
                 inset 0 -1px 0 rgba(0, 0, 0, 0.05);
             z-index: 20;
         }
-        
+
         .tape::before {
             content: '';
             position: absolute;
@@ -98,16 +99,14 @@
             left: 3px;
             right: 3px;
             bottom: 3px;
-            background: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 2px,
-                rgba(0, 0, 0, 0.02) 2px,
-                rgba(0, 0, 0, 0.02) 4px
-            );
+            background: repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.02) 2px,
+                    rgba(0, 0, 0, 0.02) 4px);
             border-radius: 1px;
         }
-        
+
         .post-it::before {
             content: '';
             position: absolute;
@@ -118,30 +117,54 @@
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, transparent 100%);
             border-radius: 0.5rem 0.5rem 0 0;
         }
-        
+
         /* Animation for post-its when page loads */
         @keyframes floatIn {
             from {
                 opacity: 0;
                 transform: translateY(20px) rotate(0deg);
             }
+
             to {
                 opacity: 1;
             }
         }
-        
+
         .post-it {
             animation: floatIn 0.6s ease-out forwards;
         }
-        
-        .post-it:nth-child(1) { animation-delay: 0.1s; }
-        .post-it:nth-child(2) { animation-delay: 0.2s; }
-        .post-it:nth-child(3) { animation-delay: 0.3s; }
-        .post-it:nth-child(4) { animation-delay: 0.4s; }
-        .post-it:nth-child(5) { animation-delay: 0.5s; }
-        .post-it:nth-child(6) { animation-delay: 0.6s; }
-        .post-it:nth-child(7) { animation-delay: 0.7s; }
-        .post-it:nth-child(8) { animation-delay: 0.8s; }
+
+        .post-it:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .post-it:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .post-it:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .post-it:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .post-it:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .post-it:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .post-it:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .post-it:nth-child(8) {
+            animation-delay: 0.8s;
+        }
     </style>
 </head>
 
@@ -198,41 +221,38 @@
 
     <main class="flex-grow pt-10 pb-20 px-4 max-w-7xl mx-auto w-full">
         <!-- Hero Section -->
-        <section class="relative overflow-hidden rounded-xl mb-20" style="border: none !important; outline: none !important; box-shadow: none !important; -webkit-box-shadow: none !important;">
-            
+        <section class="relative overflow-hidden rounded-xl mb-20"
+            style="border: none !important; outline: none !important; box-shadow: none !important; -webkit-box-shadow: none !important;">
+
             <div
                 class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/70 to-transparent z-10">
             </div>
             <img class="w-full h-[350px] object-cover object-[center_65%] block" alt="Eventos ARMY Perú"
                 src="imagenes/eventos.jpg" style="border: none; display: block; margin: 0; padding: 0;" />
-            <div class="absolute inset-0 z-20 flex flex-col justify-center px-8 md:px-16" style="border: none !important; outline: none !important; box-shadow: none !important;">
+            <div class="absolute inset-0 z-20 flex flex-col justify-center px-8 md:px-16"
+                style="border: none !important; outline: none !important; box-shadow: none !important;">
                 <span
                     class="inline-block bg-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 w-fit">ARMY
                     PERÚ</span>
                 <h2 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-4">EVENTOS ARMY PERÚ</h2>
-                <p class="text-xl text-slate-300 font-medium max-w-2xl">Es momento de encender nuestros lightsticks, ARMY! 💜</p>
+                <p class="text-xl text-slate-300 font-medium max-w-2xl">Es momento de encender nuestros lightsticks,
+                    ARMY! 💜</p>
             </div>
         </section>
 
         <!-- Filters -->
         <div class="flex flex-wrap gap-3 mb-20">
-            <button
-                id="filter-todos"
-                onclick="filterEvents('todos')"
+            <button id="filter-todos" onclick="filterEvents('todos')"
                 class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary text-white rounded-full font-bold shadow-md transition-all">
                 <span class="material-symbols-outlined text-lg">star</span>
                 Todos
             </button>
-            <button
-                id="filter-cumples"
-                onclick="filterEvents('cumples')"
+            <button id="filter-cumples" onclick="filterEvents('cumples')"
                 class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
                 <span class="material-symbols-outlined text-lg">cake</span>
-                Cumples
+                CumplesAS
             </button>
-            <button
-                id="filter-presencial"
-                onclick="filterEvents('presencial')"
+            <button id="filter-presencial" onclick="filterEvents('presencial')"
                 class="filter-btn flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
                 <span class="material-symbols-outlined text-lg">groups</span>
                 Presencial
@@ -250,7 +270,8 @@
         <!-- Events Grid -->
         <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Event Card 1: Vante's Atelier -->
-            <div class="event-card glass-card rounded-xl overflow-hidden purple-glow group flex flex-col h-full" data-category="presencial">
+            <div class="event-card glass-card rounded-xl overflow-hidden purple-glow group flex flex-col h-full"
+                data-category="presencial">
                 <div class="relative h-64 overflow-hidden">
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         data-alt="Jazz y Arte - Kim Taehyung"
@@ -265,8 +286,10 @@
                         <span class="text-3xl">🎷</span>
                         <h4 class="text-2xl font-800 leading-tight">Vante's Atelier: Una Tarde de Jazz & Arte</h4>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 flex-1">Inspirado en la visión artística de Kim Taehyung. Un espacio donde la música y la pintura se encuentran en una tarde bohemia con playlist de jazz.</p>
-                    
+                    <p class="text-slate-400 text-sm mb-6 flex-1">Inspirado en la visión artística de Kim Taehyung. Un
+                        espacio donde la música y la pintura se encuentran en una tarde bohemia con playlist de jazz.
+                    </p>
+
                     <!-- Date & Time Info -->
                     <div class="mb-6 glass p-4 rounded-lg border border-primary/20">
                         <div class="flex items-center gap-3 mb-2">
@@ -282,7 +305,7 @@
                             <p class="text-slate-300 text-sm">Barranco</p>
                         </div>
                     </div>
-                    
+
                     <button
                         onclick="addToCalendar('Vante\'s Atelier: Una Tarde de Jazz & Arte 🎷', '2026-05-23T16:30:00', '2026-05-23T19:30:00', 'Barranco, Lima, Perú', 'Inspirado en la visión artística de Kim Taehyung. Un espacio donde la música y la pintura se encuentran en una tarde bohemia con playlist de jazz.')"
                         class="w-full py-3 bg-primary/10 hover:bg-primary text-primary hover:text-white rounded-full font-bold transition-all border border-primary/20 flex items-center justify-center gap-2">
@@ -292,7 +315,8 @@
             </div>
 
             <!-- Event Card 2: Aniversario de BTS -->
-            <div class="event-card glass-card rounded-xl overflow-hidden purple-glow group flex flex-col h-full" data-category="presencial">
+            <div class="event-card glass-card rounded-xl overflow-hidden purple-glow group flex flex-col h-full"
+                data-category="presencial">
                 <div class="relative h-64 overflow-hidden">
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         data-alt="Aniversario BTS"
@@ -307,8 +331,9 @@
                         <span class="text-3xl">🌟</span>
                         <h4 class="text-2xl font-800 leading-tight">Aniversario de BTS: 13 Years of Magic</h4>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 flex-1">Nuestra cita anual para celebrar el debut. Dinámicas, soplado de velas y proyectos de unión para el tour de octubre. ¡Trae tu Army Bomb!</p>
-                    
+                    <p class="text-slate-400 text-sm mb-6 flex-1">Nuestra cita anual para celebrar el debut. Dinámicas,
+                        soplado de velas y proyectos de unión para el tour de octubre. ¡Trae tu Army Bomb!</p>
+
                     <!-- Date & Time Info -->
                     <div class="mb-6 glass p-4 rounded-lg border border-primary/20">
                         <div class="flex items-center gap-3 mb-2">
@@ -324,7 +349,7 @@
                             <p class="text-slate-300 text-sm">Parque de la Reserva</p>
                         </div>
                     </div>
-                    
+
                     <button
                         onclick="addToCalendar('Aniversario de BTS: 13 Years of Magic 🌟', '2026-06-13T14:00:00', '2026-06-13T18:00:00', 'Parque de la Reserva, Lima, Perú', 'Nuestra cita anual para celebrar el debut. Dinámicas, soplado de velas y proyectos de unión para el tour de octubre. ¡Trae tu Army Bomb!')"
                         class="w-full py-3 bg-primary text-white rounded-full font-bold transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
@@ -334,7 +359,8 @@
             </div>
 
             <!-- Event Card 3: Cumpleaños de Jungkook -->
-            <div class="event-card glass-card rounded-xl overflow-hidden purple-glow group flex flex-col h-full" data-category="cumples">
+            <div class="event-card glass-card rounded-xl overflow-hidden purple-glow group flex flex-col h-full"
+                data-category="cumples">
                 <div class="relative h-64 overflow-hidden">
                     <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         data-alt="Jungkook Golden Birthday"
@@ -349,8 +375,9 @@
                         <span class="text-3xl">🚌</span>
                         <h4 class="text-2xl font-800 leading-tight">Cumpleaños de Jungkook: Golden Bus Tour</h4>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 flex-1">¡El Golden Maknae cumple años! Únete al recorrido en bus temático por Lima con sorpresas exclusivas y kits de regalo para ARMY.</p>
-                    
+                    <p class="text-slate-400 text-sm mb-6 flex-1">¡El Golden Maknae cumple años! Únete al recorrido en
+                        bus temático por Lima con sorpresas exclusivas y kits de regalo para ARMY.</p>
+
                     <!-- Date & Time Info -->
                     <div class="mb-6 glass p-4 rounded-lg border border-primary/20">
                         <div class="flex items-center gap-3 mb-2">
@@ -366,7 +393,7 @@
                             <p class="text-slate-300 text-sm">Punto por confirmar</p>
                         </div>
                     </div>
-                    
+
                     <button
                         onclick="addToCalendar('Cumpleaños de Jungkook: Golden Bus Tour 🚌', '2026-09-01T15:00:00', '2026-09-01T18:00:00', 'Lima, Perú (Punto por confirmar)', '¡El Golden Maknae cumple años! Únete al recorrido en bus temático por Lima con sorpresas exclusivas y kits de regalo para ARMY.')"
                         class="w-full py-3 bg-primary/10 hover:bg-primary text-primary hover:text-white rounded-full font-bold transition-all border border-primary/20 flex items-center justify-center gap-2">
@@ -381,11 +408,12 @@
             <!-- Background decorative elements -->
             <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
             <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-purple-500/10 blur-[100px] rounded-full"></div>
-            
+
             <div class="relative z-10">
                 <!-- Header -->
                 <div class="text-center mb-12">
-                    <div class="inline-block bg-primary/20 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 text-primary border border-primary/30">
+                    <div
+                        class="inline-block bg-primary/20 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 text-primary border border-primary/30">
                         Tu Voz Importa
                     </div>
                     <h3 class="text-4xl md:text-5xl font-black mb-4 flex items-center justify-center gap-3 flex-wrap">
@@ -393,58 +421,74 @@
                         <span class="text-5xl">📫</span>
                     </h3>
                     <p class="text-lg text-slate-300 max-w-2xl mx-auto">
-                        ¿Qué eventos te gustaría ver? ¡Deja tu sugerencia y hagamos de esto un espacio todavía más bonito! 💜
+                        ¿Qué eventos te gustaría ver? ¡Deja tu sugerencia y hagamos de esto un espacio todavía más
+                        bonito! 💜
                     </p>
                 </div>
 
                 <!-- Post-its Board -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 relative">
                     <!-- Post-it 1 -->
-                    <div class="post-it bg-gradient-to-br from-purple-200 to-purple-300 p-6 rounded-lg shadow-lg transform rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-purple-200 to-purple-300 p-6 rounded-lg shadow-lg transform rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-purple-900 text-xl leading-tight relative z-10 pt-2">¡Un picnic temático en el parque! 🧸</p>
+                        <p class="text-purple-900 text-xl leading-tight relative z-10 pt-2">¡Un picnic temático en el
+                            parque! 🧸</p>
                     </div>
 
                     <!-- Post-it 2 -->
-                    <div class="post-it bg-gradient-to-br from-pink-200 to-pink-300 p-6 rounded-lg shadow-lg transform rotate-[3deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-pink-200 to-pink-300 p-6 rounded-lg shadow-lg transform rotate-[3deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-pink-900 text-xl leading-tight relative z-10 pt-2">¡Noche de karaoke con hits de BTS! 🎤</p>
+                        <p class="text-pink-900 text-xl leading-tight relative z-10 pt-2">¡Noche de karaoke con hits de
+                            BTS! 🎤</p>
                     </div>
 
                     <!-- Post-it 3 -->
-                    <div class="post-it bg-gradient-to-br from-blue-200 to-blue-300 p-6 rounded-lg shadow-lg transform rotate-[-1deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-blue-200 to-blue-300 p-6 rounded-lg shadow-lg transform rotate-[-1deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-blue-900 text-xl leading-tight relative z-10 pt-2">Maratón de Run BTS con snacks 🍿</p>
+                        <p class="text-blue-900 text-xl leading-tight relative z-10 pt-2">Maratón de Run BTS con snacks
+                            🍿</p>
                     </div>
 
                     <!-- Post-it 4 -->
-                    <div class="post-it bg-gradient-to-br from-yellow-200 to-yellow-300 p-6 rounded-lg shadow-lg transform rotate-[2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-yellow-200 to-yellow-300 p-6 rounded-lg shadow-lg transform rotate-[2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-yellow-900 text-xl leading-tight relative z-10 pt-2">Taller de K-beauty y maquillaje 💄</p>
+                        <p class="text-yellow-900 text-xl leading-tight relative z-10 pt-2">Taller de K-beauty y
+                            maquillaje 💄</p>
                     </div>
 
                     <!-- Post-it 5 -->
-                    <div class="post-it bg-gradient-to-br from-green-200 to-green-300 p-6 rounded-lg shadow-lg transform rotate-[-3deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-green-200 to-green-300 p-6 rounded-lg shadow-lg transform rotate-[-3deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-green-900 text-xl leading-tight relative z-10 pt-2">Clase de coreografía grupal 💃</p>
+                        <p class="text-green-900 text-xl leading-tight relative z-10 pt-2">Clase de coreografía grupal
+                            💃</p>
                     </div>
 
                     <!-- Post-it 6 -->
-                    <div class="post-it bg-gradient-to-br from-indigo-200 to-indigo-300 p-6 rounded-lg shadow-lg transform rotate-[1deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-indigo-200 to-indigo-300 p-6 rounded-lg shadow-lg transform rotate-[1deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-indigo-900 text-xl leading-tight relative z-10 pt-2">Intercambio de merch y photocards 🎴</p>
+                        <p class="text-indigo-900 text-xl leading-tight relative z-10 pt-2">Intercambio de merch y
+                            photocards 🎴</p>
                     </div>
 
                     <!-- Post-it 7 -->
-                    <div class="post-it bg-gradient-to-br from-rose-200 to-rose-300 p-6 rounded-lg shadow-lg transform rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-rose-200 to-rose-300 p-6 rounded-lg shadow-lg transform rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
                         <p class="text-rose-900 text-xl leading-tight relative z-10 pt-2">Cine bajo las estrellas 🌟</p>
                     </div>
 
                     <!-- Post-it 8 -->
-                    <div class="post-it bg-gradient-to-br from-purple-200 to-purple-300 p-6 rounded-lg shadow-lg transform rotate-[2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
+                    <div
+                        class="post-it bg-gradient-to-br from-purple-200 to-purple-300 p-6 rounded-lg shadow-lg transform rotate-[2deg] hover:rotate-0 hover:scale-105 transition-all duration-300 cursor-pointer group">
                         <div class="tape"></div>
-                        <p class="text-purple-900 text-xl leading-tight relative z-10 pt-2">Tour fotográfico por Lima 📸</p>
+                        <p class="text-purple-900 text-xl leading-tight relative z-10 pt-2">Tour fotográfico por Lima 📸
+                        </p>
                     </div>
                 </div>
 
@@ -455,7 +499,8 @@
                         class="group relative inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-10 py-5 rounded-full font-black text-lg shadow-[0_0_40px_rgba(173,43,238,0.4)] hover:shadow-[0_0_60px_rgba(173,43,238,0.6)] transition-all duration-300 hover:scale-105">
                         <span class="text-2xl group-hover:rotate-12 transition-transform">📌</span>
                         <span>Envia tu sugerencia</span>
-                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </button>
                     <p class="text-slate-400 text-sm mt-4">Todas las ideas son bienvenidas.💜</p>
                 </div>
@@ -472,9 +517,9 @@
                     <span class="material-symbols-outlined text-primary">rocket_launch</span>
                     <span class="text-2xl font-black italic tracking-tighter">ARMY UNIVERSE</span>
                 </div>
-                <p class="text-slate-500 text-sm">Hecho con 💜</p> 
+                <p class="text-slate-500 text-sm">Hecho con 💜</p>
             </div>
-            
+
             <!-- Center Section: Follow Us + Social Icons -->
             <div class="flex flex-col items-center gap-3 flex-1">
                 <p class="text-slate-300 text-sm font-semibold">Siguenos en nuestras redes</p>
@@ -496,34 +541,35 @@
                     </a>
                 </div>
             </div>
-            
+
             <!-- Right Section: Copyright -->
-            <div class="text-slate-500 text-[10px] uppercase font-bold tracking-widest text-center md:text-right flex-1">
+            <div
+                class="text-slate-500 text-[10px] uppercase font-bold tracking-widest text-center md:text-right flex-1">
                 © 2026 ARMY UNIVERSE — Caminando junto a BTS.
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    
+
     <!-- Events Filter Script -->
     <script>
         function filterEvents(category) {
             const eventCards = document.querySelectorAll('.event-card');
             const filterButtons = document.querySelectorAll('.filter-btn');
-            
+
             // Update button styles
             filterButtons.forEach(btn => {
                 btn.classList.remove('bg-primary', 'text-white', 'shadow-md');
                 btn.classList.add('bg-primary/10', 'text-primary');
             });
-            
+
             const activeButton = document.getElementById(`filter-${category}`);
             if (activeButton) {
                 activeButton.classList.remove('bg-primary/10', 'text-primary');
                 activeButton.classList.add('bg-primary', 'text-white', 'shadow-md');
             }
-            
+
             // Filter events
             eventCards.forEach(card => {
                 if (category === 'todos') {
