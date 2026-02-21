@@ -361,16 +361,28 @@
                 <button class="engagement-btn">💾 Guardar</button>
             </div>
 
-            <!-- Facebook Comments -->
+            <!-- Disqus Comments -->
             <div class="mt-8">
                 <h3
                     style="font-size:1.2rem; font-weight:700; color:#fff; margin-bottom:1.5rem; display:flex; align-items:center; gap:8px;">
-                    <i class="fa-brands fa-facebook" style="color:#ad2bee;"></i>
+                    <span class="material-symbols-outlined" style="color:#ad2bee;">forum</span>
                     Comentarios
                 </h3>
-                <div class="fb-comments" data-href="https://armyuniverse.pages.dev/blog-army-peru.html"
-                    data-width="100%" data-numposts="10" data-colorscheme="dark">
-                </div>
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = 'https://armyuniverse.pages.dev/blog-army-peru.html';
+                        this.page.identifier = 'blog-army-peru';
+                    };
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://army-universe.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                        powered by Disqus.</a></noscript>
             </div>
         </article>
     </main>
@@ -407,10 +419,6 @@
 
     <script src="js/main.js"></script>
 
-    <!-- Facebook SDK -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v19.0">
-    </script>
 
 </body>
 
