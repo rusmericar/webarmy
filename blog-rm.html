@@ -30,6 +30,8 @@
     <!-- Global Scripts (Deferred) -->
     <script defer src="js/components.js"></script>
     <script defer src="js/main.js"></script>
+
+    <link rel="icon" href="/imagenes/favicon.png" type="image/png">
 </head>
 
 <body class="text-slate-100 min-h-screen font-sans bg-[#0a0510] flex flex-col">
@@ -38,7 +40,10 @@
     <div id="header-container"></div>
 
     <main class="max-w-[900px] mx-auto px-6 py-12">
-        <a href="index.html" class="back-button">← Volver a inicio</a>
+        <a href="/blog"
+            class="inline-flex items-center gap-2 text-slate-400 hover:text-primary transition-colors mb-8 font-semibold text-sm group"><span
+                class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+            Volver al Blog</a>
 
         <article>
             <div class="article-header">
@@ -116,7 +121,8 @@
 
             <div class="engagement-buttons">
 
-                <button id="share-button" class="engagement-btn hover:scale-105 transition-transform">📤 Compartir</button>
+                <button id="share-button" class="engagement-btn hover:scale-105 transition-transform">📤
+                    Compartir</button>
 
             </div>
 

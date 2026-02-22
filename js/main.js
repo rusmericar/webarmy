@@ -313,3 +313,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// Auto-initialize default filters on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // For Blog page
+    const filterTodas = document.getElementById('filter-todas');
+    if (filterTodas && typeof applyFilter === 'function') {
+        applyFilter('todas');
+    }
+    
+    // For Events page
+    const filterTodosEvents = document.getElementById('filter-todos');
+    if (filterTodosEvents && typeof filterEvents === 'function') {
+        filterEvents('todos');
+    }
+});

@@ -5,19 +5,24 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>The Purple Blog | Army Universe</title>
-    
+
     <!-- Tailwind CSS & Config -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind.config.js"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap"
+        rel="stylesheet" />
+
     <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -25,6 +30,8 @@
     <!-- Global Scripts (Deferred) -->
     <script defer src="js/components.js"></script>
     <script defer src="js/main.js"></script>
+
+    <link rel="icon" href="/imagenes/favicon.png" type="image/png">
 </head>
 
 <body
@@ -61,28 +68,28 @@
         </section>
 
         <div class="border-b border-white/5 pb-8 md:pb-14 mb-12 md:mb-16">
-            <div class="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
+            <div class="flex overflow-x-auto md:flex-wrap gap-3 mb-6 md:mb-8 pb-4 scrollbar-hide">
                 <button onclick="applyFilter('todas')" id="filter-todas"
-                    class="filter-btn flex items-center gap-2 px-4 md:px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all text-sm md:text-base">
-                    <span class="material-symbols-outlined text-base md:text-lg">apps</span>
+                    class="filter-btn flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                    <span class="material-symbols-outlined text-lg">apps</span>
                     Todas
                 </button>
 
                 <button onclick="applyFilter('noticias')" id="filter-noticias"
-                    class="filter-btn flex items-center gap-2 px-4 md:px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all text-sm md:text-base">
-                    <span class="material-symbols-outlined text-base md:text-lg">newspaper</span>
+                    class="filter-btn flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                    <span class="material-symbols-outlined text-lg">newspaper</span>
                     Noticias
                 </button>
 
                 <button onclick="applyFilter('spotlight')" id="filter-spotlight"
-                    class="filter-btn flex items-center gap-2 px-4 md:px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all text-sm md:text-base">
-                    <span class="material-symbols-outlined text-base md:text-lg">auto_awesome</span>
+                    class="filter-btn flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                    <span class="material-symbols-outlined text-lg">auto_awesome</span>
                     Spotlight
                 </button>
 
                 <button onclick="applyFilter('teorias')" id="filter-teorias"
-                    class="filter-btn flex items-center gap-2 px-4 md:px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all text-sm md:text-base">
-                    <span class="material-symbols-outlined text-base md:text-lg">psychology</span>
+                    class="filter-btn flex-shrink-0 whitespace-nowrap flex items-center gap-2 px-6 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-full font-bold transition-all">
+                    <span class="material-symbols-outlined text-lg">psychology</span>
                     Teorías
                 </button>
             </div>
@@ -120,7 +127,7 @@
                         </p>
                         <span
                             class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                        <a href="blog-hobi.html"
+                        <a href="/blog-hobi"
                             class="inline-flex items-center gap-2 text-white hover:text-primary transition-colors text-sm font-semibold group">
                             Leer más
 
@@ -150,7 +157,7 @@
                         </p>
                         <span
                             class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                        <a href="blog-jin.html"
+                        <a href="/blog-jin"
                             class="inline-flex items-center gap-2 text-white hover:text-blue-400 transition-colors text-sm font-semibold group">
                             Leer más
 
@@ -180,7 +187,7 @@
                         </p>
                         <span
                             class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                        <a href="blog-army-peru.html"
+                        <a href="/blog-army-peru"
                             class="inline-flex items-center gap-2 text-white hover:text-green-400 transition-colors text-sm font-semibold group">
                             Leer más
 
@@ -211,7 +218,7 @@
                         </p>
                         <span
                             class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
-                        <a href="blog-teoria.html"
+                        <a href="/blog-teoria"
                             class="inline-flex items-center gap-2 text-white hover:text-purple-400 transition-colors text-sm font-semibold group">
 
                             Leer más
@@ -224,7 +231,7 @@
         </div>
     </main>
 
-    
+
 
     <!-- Standardized Footer -->
     <div id="footer-container"></div>
