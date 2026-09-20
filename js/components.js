@@ -1,12 +1,5 @@
-// Mask .html extension in URL bar for Live Server to simulate clean URLs
-if (window.location.protocol === 'http:' && (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')) {
-    if (window.location.pathname.endsWith('.html') && window.location.pathname !== '/index.html') {
-        const cleanUrl = window.location.pathname.replace('.html', '');
-        window.history.replaceState(null, '', cleanUrl + window.location.search + window.location.hash);
-    } else if (window.location.pathname === '/index.html') {
-        window.history.replaceState(null, '', '/' + window.location.search + window.location.hash);
-    }
-}
+// Nota: todos los enlaces del sitio son relativos y terminan en .html, así que
+// funcionan igual en GitHub Pages (/webarmy/), en un dominio propio y en local.
 
 document.addEventListener('DOMContentLoaded', () => {
     const loadComponent = (id, url) => {
@@ -23,45 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (id === 'header-container') {
                         // Highlight active link dynamically
                         const navLinks = container.querySelectorAll('.nav-link');
-                        let currentPath = window.location.pathname; // Gets /blog, /index, /
-
-                        // Handle Cloudflare Pages/Vercel standard clean URLs
-                        if (currentPath === '' || currentPath === '/' || currentPath === '/index' || currentPath === '/index.html') {
-                            currentPath = '/';
-                        }
-                        if (currentPath !== '/' && currentPath.endsWith('/')) {
-                            currentPath = currentPath.slice(0, -1); // Remove trailing slash
-                        }
-                        if (currentPath.endsWith('.html')) {
-                            currentPath = currentPath.replace('.html', ''); // Match explicit requests
-                        }
+                        // Nombre del archivo actual: "blog", "eventos", "index"...
+                        // (una URL que termina en "/" o vacía es la portada)
+                        let currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+                        if (currentPage === '') currentPage = 'index';
 
                         navLinks.forEach(link => {
-                            const href = link.getAttribute('href');
-                            if (href === currentPath || (href === '/' && currentPath === '/')) {
+                            const linkPage = (link.getAttribute('href') || '').split('/').pop().replace('.html', '');
+                            if (linkPage === currentPage) {
                                 link.classList.add('text-primary');
                             }
                         });
-
-                        // Polyfill to make clean navigation work on Live Server without 404
-                        if (!window.__cleanUrlPolyfillAdded) {
-                            window.__cleanUrlPolyfillAdded = true;
-                            document.body.addEventListener('click', function (e) {
-                                const link = e.target.closest('a');
-                                if (!link) return;
-
-                                const href = link.getAttribute('href');
-                                if (!href || href === '/' || href.includes('.html') || link.hasAttribute('target')) return;
-
-                                if (href.startsWith('/')) {
-                                    const isLocalServer = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
-                                    if (isLocalServer) {
-                                        e.preventDefault();
-                                        window.location.href = href + '.html';
-                                    }
-                                }
-                            });
-                        }
 
                         // Re-initialize mobile menu toggle since it's dynamically inserted
                         initMobileMenu();
